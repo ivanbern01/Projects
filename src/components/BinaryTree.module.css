@@ -1,0 +1,113 @@
+.tree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.node {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 10px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.children {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.children::before,
+.children::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 50%;
+  height: 20px;
+  border-top: 2px solid black;
+}
+
+.children::before {
+  left: 0;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+
+.children::after {
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .circle {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .children {
+    margin-top: 15px;
+  }
+
+  .children::before,
+  .children::after {
+    width: 45%;
+    height: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .circle {
+    width: 35px;
+    height: 35px;
+    font-size: 10px;
+  }
+
+  .children {
+    margin-top: 10px;
+  }
+
+  .children::before,
+  .children::after {
+    width: 40%;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tree {
+    margin-top: 10px;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    font-size: 8px;
+  }
+}

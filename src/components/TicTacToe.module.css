@@ -1,0 +1,40 @@
+.game {
+    max-width: 400px;
+    margin: 50px auto;
+  }
+  
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cell {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+  }
+  
+  .cell:hover {
+    background-color: #e9ecef;
+  }
+  
+  .cell:active {
+    background-color: #dee2e6;
+  }
+  
+  .scoreboard {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .matchWinner {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+  }
+  

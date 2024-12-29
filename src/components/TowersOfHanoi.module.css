@@ -1,0 +1,147 @@
+.container {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .towerContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .tower {
+    width: 120px;
+    height: 300px;
+    border: 2px solid #6c757d;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: #f8f9fa;
+    margin: 10px;
+  }
+  
+  .disk {
+    margin: 5px 0;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    transition: width 0.3s ease;
+  }
+  
+  .disk1 {
+    width: 40px;
+    height: 30px;
+    background-color: #007bff;
+  }
+  
+  .disk2 {
+    width: 60px;
+    height: 30px;
+    background-color: #28a745;
+  }
+  
+  .disk3 {
+    width: 80px;
+    height: 30px;
+    background-color: #ffc107;
+  }
+  
+  .disk4 {
+    width: 100px;
+    height: 30px;
+    background-color: #fd7e14;
+  }
+  
+  .disk5 {
+    width: 120px;
+    height: 30px;
+    background-color: #dc3545;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .towerContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .tower {
+      width: 100px;
+      height: 250px;
+    }
+  
+    .disk {
+      height: 25px;
+    }
+  
+    .disk1 {
+      width: 30px;
+    }
+  
+    .disk2 {
+      width: 50px;
+    }
+  
+    .disk3 {
+      width: 70px;
+    }
+  
+    .disk4 {
+      width: 90px;
+    }
+  
+    .disk5 {
+      width: 110px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .tower {
+      width: 80px;
+      height: 200px;
+    }
+  
+    .disk {
+      height: 20px;
+    }
+  
+    .disk1 {
+      width: 25px;
+    }
+  
+    .disk2 {
+      width: 40px;
+    }
+  
+    .disk3 {
+      width: 60px;
+    }
+  
+    .disk4 {
+      width: 80px;
+    }
+  
+    .disk5 {
+      width: 100px;
+    }
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .moveContainer {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  

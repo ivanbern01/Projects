@@ -1,0 +1,98 @@
+/* Navbar Container */
+.navbar {
+    background-color: #f8f9fa; /* Light background */
+    padding: 0.75rem 1rem; /* Add padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #007f00;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: forestgreen; /* Change color on hover */
+}
+
+/* Base link styling */
+.navLink {
+    color: #000; /* Black text */
+    text-decoration: none;
+    position: relative; /* For underline effect */
+    padding: 0.5rem 1rem; /* Add spacing */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Hover and Active Link Effects */
+.navLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: forestgreen; /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+.navLink:hover::after {
+    width: 100%; /* Full underline */
+}
+
+.navLink:hover {
+    color: #007f00; /* Text color on hover */
+}
+
+/* Active link styling */
+.active {
+    color: #007f00; /* Highlight active link */
+}
+
+.active::after {
+    width: 100%; /* Persistent underline for active links */
+}
+
+/* Responsive Dropdown Menu Styling */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .navbar {
+        text-align: center; /* Center navbar content on small screens */
+    }
+
+    .navbar-collapse {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    .navLink {
+        display: block; /* Ensure links take up full width */
+        padding: 0.75rem; /* Increase padding for touch-friendly design */
+    }
+
+    .navbar-brand {
+        margin-bottom: 1rem; /* Add spacing below the brand */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Align toggler to the right */
+    }
+}
+
+@media (max-width: 576px) {
+    .navLink {
+        font-size: 1rem; /* Reduce font size on smaller screens */
+    }
+}
